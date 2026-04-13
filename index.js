@@ -397,14 +397,16 @@ frame.selectAll("rect")
 
 //pie chart 
 // made with https://www.d3indepth.com/shapes/
+//handling event https://d3js.org/d3-selection/events
 let frame_pie = d3.select("#pie_vis")
                 .append("svg")
                 .attr("width", width + margin*2) //multipled bc labels werent fitting
                 .attr("height", height + margin*2);
 
 
-frame_pie.append("g")
-        .attr("transform", `translate(${margin}, 0)`)
+//frame_pie.append("g")
+    //    .attr("transform", `translate(${margin}, 0)`)\
+   //       .attr("transform", `translate(100, 100)`)
 
 
 frame_pie.append("text")
@@ -427,20 +429,25 @@ let arcGenerator = d3.arc()
 
 let arcData = pieGenerator(frequency_data);
 
+//Source - https://stackoverflow.com/a/33860567 - Posted by Mark
 
- 
- function click_pie(){
-    let prop = d3.select(this)
-    prop.append("text")
-    prop.text(d.data.key);
- }
+function click_chart(click, d) {
+  console.log(d);
+          d3.select("#pie_vis")
+            .append("text")
+            .attr("x", 40)
+            .attr("y", 144)
+            .style("font-size", 15)
+            .text((d.data.value/37)*100 + "%   "+ d.data.key)};
 
 
 
-frame_pie.selectAll('path')
+                        
+
+frame_pie.append('g')
+.attr("transform", `translate(300, 200)`)
+.selectAll('path')
 .data(arcData)
 .join('path')
-.on('click', click_pie)
+.on("click", click_chart)
 .attr('d', arcGenerator);
-
-
