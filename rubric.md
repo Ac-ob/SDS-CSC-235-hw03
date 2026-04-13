@@ -25,9 +25,9 @@ _yes_ 3 pts: Functional highlighting
 
 ### Phase 2:
 
-_part_ 1 pt: Sound data-visual mapping 
+_yes_ 1 pt: Sound data-visual mapping 
 
-_part_ 1 pt: Aesthetically pleasing 
+_yes_ 1 pt: Aesthetically pleasing 
 
 _yes_ 1 pt: Title
 
@@ -35,7 +35,7 @@ _yes_ 1 pt: Proper labeling
 
 _yes_ 1 pt: Correct proportions 
 
-_part_ 3 pts: Functional response to click  
+_yes_ 3 pts: Functional response to click  
 
 ### General:
 
@@ -47,6 +47,6 @@ _yes_ 1 pt: Completed `rubric.md` included with submission
 
 _yes_ 1 pt: Browser compiles code with no errors 
 
-_part_ 1 pt: Interactive components execute fully and consistently with no errors
+_yes_ 1 pt: Interactive components execute fully and consistently with no errors
 
-_na_ Changelog: Completed `changelog.md` included with submission
+_yes_ Changelog: Completed `changelog.md` included with submission
